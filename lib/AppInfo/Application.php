@@ -22,10 +22,13 @@ declare(strict_types=1);
 
 namespace OCA\IonosProcesses\AppInfo;
 
+use OCA\IonosProcesses\Listener\RemoteWipeListener;
+use OC\Authentication\Events\RemoteWipeStarted;
 use OCP\AppFramework\App;
 use OCP\AppFramework\Bootstrap\IBootContext;
 use OCP\AppFramework\Bootstrap\IBootstrap;
 use OCP\AppFramework\Bootstrap\IRegistrationContext;
+use OCP\EventDispatcher\IEventDispatcher;
 
 class Application extends App implements IBootstrap {
 	public const APP_ID = 'nc_ionos_processes';
@@ -39,5 +42,10 @@ class Application extends App implements IBootstrap {
 	}
 
 	public function boot(IBootContext $context): void {
+		$context->injectFn([$this, 'registerEventsScripts']);
+	}
+
+	public function registerEventsScripts(IEventDispatcher $dispatcher): void {
+		$dispatcher->addServiceListener(RemoteWipeStarted::class, RemoteWipeListener::class);
 	}
 }
