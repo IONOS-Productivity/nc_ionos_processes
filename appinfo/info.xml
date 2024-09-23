@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+	<id>nc_ionos_processes</id>
+	<name>IONOS Processes</name>
+	<summary>IONOS processes</summary>
+	<description>This addon handles IONOS internal processes like customized mail delivery upon various events.</description>
+	<version>1.0.0</version>
+	<licence>agpl</licence>
+	<author mail="t.lehmann@strato.de" homepage="https://github.com/IONOS-Productivity">Strato AG</author>
+	<namespace>IonosProcesses</namespace>
+	<category>integration</category>
+	<bugs>https://github.com/IONOS-Productivity</bugs>
+	<dependencies>
+		<nextcloud min-version="29" max-version="31"/>
+	</dependencies>
+	<!--
+	- no navigations configured
+	-->
+</info>
