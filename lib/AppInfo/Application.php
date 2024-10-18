@@ -22,10 +22,12 @@ declare(strict_types=1);
 
 namespace OCA\IonosProcesses\AppInfo;
 
+use OCA\IonosProcesses\Listener\ShareCreatedEventListener;
 use OCP\AppFramework\App;
 use OCP\AppFramework\Bootstrap\IBootContext;
 use OCP\AppFramework\Bootstrap\IBootstrap;
 use OCP\AppFramework\Bootstrap\IRegistrationContext;
+use OCP\Share\Events\ShareCreatedEvent;
 
 class Application extends App implements IBootstrap {
 	public const APP_ID = 'nc_ionos_processes';
@@ -36,6 +38,7 @@ class Application extends App implements IBootstrap {
 	}
 
 	public function register(IRegistrationContext $context): void {
+		$context->registerEventListener(ShareCreatedEvent::class, ShareCreatedEventListener::class);
 	}
 
 	public function boot(IBootContext $context): void {
