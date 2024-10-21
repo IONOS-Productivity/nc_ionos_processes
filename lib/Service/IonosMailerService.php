@@ -7,11 +7,15 @@
 
 namespace OCA\IonosProcesses\Service;
 
+use Psr\Log\LoggerInterface;
+
 /**
  * Client for the internal mail delivery web service.
  */
 class IonosMailerService {
-	public function __construct() {
+	public function __construct(
+		private readonly LoggerInterface $logger,
+	) {
 	}
 
 	/**
@@ -22,5 +26,6 @@ class IonosMailerService {
 	 */
 	public function send(string $eventName, array $variables): void {
 		// Stub
+		$this->logger->debug($eventName . ' = ' . json_encode($variables));
 	}
 }
