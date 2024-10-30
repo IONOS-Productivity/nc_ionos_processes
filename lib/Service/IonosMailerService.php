@@ -18,7 +18,7 @@ class IonosMailerService {
 	 * Send mails to the mail delivery web service
 	 *
 	 * @param string $eventName name of the event
-	 * @param array $associative array of variables to the mail service
+	 * @param array $variables variables to send to the mail service
 	 */
 	public function send(string $eventName, array $variables): void {
 		// Stub
