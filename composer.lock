@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c99d9f22b7e0d099335a01dc3ed5f936",
+    "content-hash": "719c9f2f3f67e71f54009245a6c94b61",
     "packages": [
         {
             "name": "bamarni/composer-bin-plugin",
@@ -62,6 +62,21 @@
                 "source": "https://github.com/bamarni/composer-bin-plugin/tree/1.8.2"
             },
             "time": "2022-10-31T08:38:03+00:00"
+        },
+        {
+            "name": "ionos-productivity/ionos-mail-notification-api-client",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ionos-productivity/ionos-mail-notification-api-client.git",
+                "reference": "1.0.0-20241129122727"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "IONOS\\MailNotificationAPI\\Client\\": "lib/"
+                }
+            }
         }
     ],
     "packages-dev": [
@@ -1294,9 +1309,9 @@
     "platform": {
         "php": "^8.1"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "platform-overrides": {
         "php": "8.1"
     },
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.6.0"
 }
