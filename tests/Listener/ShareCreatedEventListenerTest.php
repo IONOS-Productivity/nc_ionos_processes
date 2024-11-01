@@ -63,6 +63,7 @@ class ShareCreatedEventListenerTest extends TestCase {
 			->getMock();
 
 		$this->mockMailer = $this->getMockBuilder(IonosMailerService::class)
+			->disableOriginalConstructor()
 			->onlyMethods([
 				'send',
 			])
