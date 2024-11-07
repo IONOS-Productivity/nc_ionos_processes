@@ -25,6 +25,11 @@ class ApiClientService {
 	 * @return EventAPIApi
 	 */
 	public function newEventAPIApi(ClientInterface $client, string $apiBaseUrl): EventAPIApi {
+
+		if (empty($apiBaseUrl)) {
+			throw new \InvalidArgumentException('API base URL is required');
+		}
+
 		$apiClient = new EventAPIApi(
 			$client,
 		);
