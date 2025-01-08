@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "719c9f2f3f67e71f54009245a6c94b61",
+    "content-hash": "fa1b05a855ddc84e540029ccf1328612",
     "packages": [
         {
             "name": "bamarni/composer-bin-plugin",
@@ -69,7 +69,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ionos-productivity/ionos-mail-notification-api-client.git",
-                "reference": "1.0.0-20241129122727"
+                "reference": "1.0.0-20241219115512"
             },
             "type": "library",
             "autoload": {
