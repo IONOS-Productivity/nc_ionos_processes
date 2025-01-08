@@ -46,7 +46,7 @@
 				"source": {
 					"type": "git",
 					"url": "https://github.com/ionos-productivity/ionos-mail-notification-api-client.git",
-					"reference": "1.0.0-20241129122727"
+					"reference": "1.0.0-20241219115512"
 				},
 				"autoload": {
 					"psr-4": {
